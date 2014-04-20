@@ -17,8 +17,7 @@ class BinarySearchTree {
 public:
   Node* root;
   BinarySearchTree():root(NULL){}
-public:
-  Node* get_root();
+
   Node* Insert(Node* node);
   Node* Delete(Node* z);
   void InorderTreeWalkRecursive(Node* x);
@@ -32,10 +31,6 @@ public:
 /**
  * Define the class
  */
-inline Node* BinarySearchTree::get_root() {
-  return root;
-}
-
 Node* BinarySearchTree::Insert(Node* node) {
   Node* x = root;
   Node* y = NULL;
