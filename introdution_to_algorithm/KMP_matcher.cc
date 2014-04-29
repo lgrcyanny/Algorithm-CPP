@@ -49,13 +49,13 @@ void KMPMatcher::Match(char pattern[]) {
     }
     if (q == m) {
       cout << "The index is " << (i - m + 1) << endl;
-      q = pi[q];
+      q = pi[q - 1];
     }
   }
 }
 
 int main(int argc, char const *argv[]) {
-  char source[] = "ababababcavvvababababca";
+  char source[] = "cababababcavabababvvababababcaab";
   char pattern[] = "ababababca";
   KMPMatcher* kmp_matcher = new KMPMatcher(source);
   kmp_matcher->Match(pattern);
